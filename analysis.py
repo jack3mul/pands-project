@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 data = pd.read_csv("iris_data.csv")
 
@@ -32,12 +31,14 @@ for feature in features:
     plt.legend()
     plt.xlabel(feature)
     plt.ylabel("number")
-    #plt.show()
+    #plt.show()                 Required for testing only
     plt.savefig(feature)
+    plt.close()
 
 plt.hist([data[features[0]], data[features[1]], data[features[2]], data[features[3]]], label=[features[0], features[1], features[2], features[3]])
 plt.legend()
 plt.savefig("combined_hist")
+plt.close()
 
 #Scatter plots
 
@@ -51,6 +52,7 @@ plt.ylabel(features[1])
 plt.title('Sepal Characteristics')
 #plt.show()
 plt.savefig('Sepal Characteristics')
+plt.close()
 
 plt.scatter(data[features[2]],data[features[3]],c=data[' species'].map(colors))
 plt.xlabel(features[2])
@@ -58,5 +60,6 @@ plt.ylabel(features[3])
 plt.title('Petal Characteristics')
 #plt.show()
 plt.savefig('Petal Characteristics')
+plt.close()
 
 
