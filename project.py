@@ -27,6 +27,6 @@ for feature in features:
     #plt.show()
     plt.savefig(feature)
 
-#plt.hist([data[features[0]], data[features[1]], data[features[2]], data[features[3]]], label=[features[0], features[1], features[2], features[3]])
-#plt.legend()
-#plt.show()
+plt.hist([data[features[0]], data[features[1]], data[features[2]], data[features[3]]], label=[features[0], features[1], features[2], features[3]])
+plt.legend()
+plt.show()
