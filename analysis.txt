@@ -1,3 +1,47 @@
+************** IRIS DATA SET ANALYSIS **************
+
+Details of the data are:
+ None
+Check for null values: 
+sepal_length     0
+ sepal_width     0
+ petal_length    0
+ petal_width     0
+ species         0
+dtype: int64
+***********
+
+No null values found in the data set
+
+***********
+Confirm that there are equal value for all attributes:
+ species
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+dtype: int64(150, 5)
+***********
+       sepal_length   sepal_width   petal_length   petal_width
+count    150.000000    150.000000     150.000000    150.000000
+mean       5.843333      3.054000       3.758667      1.198667
+std        0.828066      0.433594       1.764420      0.763161
+min        4.300000      2.000000       1.000000      0.100000
+25%        5.100000      2.800000       1.600000      0.300000
+50%        5.800000      3.000000       4.350000      1.300000
+75%        6.400000      3.300000       5.100000      1.800000
+max        7.900000      4.400000       6.900000      2.500000
+***********
+
+The correlation of the data is seen in this table:
+               sepal_length   sepal_width   petal_length   petal_width
+sepal_length       1.000000     -0.109369       0.871754      0.817954
+ sepal_width      -0.109369      1.000000      -0.420516     -0.356544
+ petal_length      0.871754     -0.420516       1.000000      0.962757
+ petal_width       0.817954     -0.356544       0.962757      1.000000
+***********
+
+My analysis of the data is as follows:
+
 # pands-project
 investigation into Fisher's Iris Data Set
 
@@ -35,3 +79,6 @@ The Iris-virginica has larger petal lengths and widths but its data overlaps wit
 
 Issues encountered:
 Plots over ran into each other and in at least one case displayed data not present and wrong. I solved this by experimenting with a plt.close() to clean things up and to end an instance of plt before writing to another one. this solved the issue and the plots presented data as expected.
+
+
+**********END**********
