@@ -45,7 +45,7 @@ features = ['sepal_length', ' sepal_width', ' petal_length', ' petal_width']
 #this will cut down on retyping these long names..now ref features[0]..[3]
 
 #loop to automate histogram creation - repetitive so should be automated
-#close aech plt before moving on - had encountered errors here previously
+#close each plt before moving on - had encountered errors here previously
 for feature in features:
     plt.hist([data[feature]])
     plt.title(feature)
@@ -68,7 +68,13 @@ colors = {'Iris-setosa':'red', 'Iris-virginica':'blue','Iris-versicolor':'green'
 #set preferences in here for different elements and colours - personal choice - 
 
 plt.scatter(data[features[0]],data[features[1]],c=data[' species'].map(colors))
-# map the colour back to the species
+# map the colour back to the species - c is optional found at https://www.w3schools.com/python/matplotlib_scatter.asp
+# this technique either uses a colour range or assigns an individual colour to a point which is unsuitable for me here
+# the map function in python worked in a scatter plot because it identified the 3 species easily
+# I have used this function before in different context 
+# the use of map used above was found in a youtube video titled "Python Data Analysis with Iris Dataset"
+# This video is found at https://www.youtube.com/watch?v=02BFXhPQWHQ
+
 plt.xlabel(features[0])
 plt.ylabel(features[1])
 plt.title('Sepal Characteristics')
